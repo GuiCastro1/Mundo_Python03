@@ -9,7 +9,9 @@ from random import randint
 from time import sleep
 lista = []
 aux = []
-print('=====MEGA SENA=====')
+print('-=' * 15)
+print(f'{'MEGA SENA':^30}')
+print('-=' * 15)
 
 # jogos = int(input('Quntos jogos deseja fazer:'))
 
@@ -44,12 +46,14 @@ while True:
     if len(lista) == jogo:
         break
 
+for i, v in enumerate(lista):
 
-for i in lista:
-
-    print(i)
+    print(f'Jogo{i + 1}: {v}')
     sleep(0.5)
-print('BOA SORTE ! ! !')
+    
+print('-=' * 15)
+print(f'{'BOA SORTE ! ! !':^30}')
+print('-=' * 15)
     # if len(aux) == jogo * 6:
     #     break
 '''

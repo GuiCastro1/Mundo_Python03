@@ -11,8 +11,8 @@ aux = []
 while True:
 
     nome = str(input('Digite o nome do aluno:'))
-    n1 = int(input('Digite 1ª nota do aluno:'))
-    n2 = int(input('Digite 2ª nota do aluno:'))
+    n1 = float(input('Digite 1ª nota do aluno:'))
+    n2 = float(input('Digite 2ª nota do aluno:'))
     media = (n1 + n2) / 2
     lista.append([nome, n1, n2, media])
 
@@ -33,7 +33,7 @@ print(f'{"Nº":<4}{"Nome":<10}{"Média":>8}')
 print('-' * 30)
 
 for i, v in enumerate(lista):
-    print(f'O aluno {i:<4} chamado, {v[0]:<10} tem a media de {v[3]:>8.2f}')
+    print(f' {i + 1:<4}  {v[0]:<10}  {v[3]:>8.2f}')
 
 while True:
 

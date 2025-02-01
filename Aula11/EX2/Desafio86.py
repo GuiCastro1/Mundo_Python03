@@ -21,8 +21,26 @@ for i in range(1,8):
 lista.append(aux_da_aux[:])
 lista.append(aux[:])
 print(lista)
+'''
+correção guanabara
+lista = [[], []]
 
+for i in range(1, 8):
 
+    num = int(input(f'Digite o {i}º valor:'))
+
+    if num % 2 == 0:
+        lista[0].append(num)
+    else:
+        lista[1].append(num)
+
+lista[0].sort()
+lista[1].sort()
+print(lista)
+
+print(f'Os números de pares foram, {lista[0]}')
+print(f'Os números de ímpares foram, {lista[1]}')
+'''
 
 '''
 

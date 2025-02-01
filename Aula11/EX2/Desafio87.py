@@ -5,6 +5,7 @@ Criado por: Gui Castro
 
 Crie um programa que crie uma matriz 3 x 3 e preencha com os valores lidos pelo teclado. No final mostre com formatação correta.
 '''
+#meu
 lista = []
 lista_aux = []
 for i in range (1,10):
@@ -18,3 +19,18 @@ for i in range (1,10):
 
 for i in lista:
     print(i)
+
+#gaunabara
+matriz = [ [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+for l in range(0,3):
+    for c in range(0,3):
+
+        matriz [l] [c] = int(input(f'Digite um número[ {l}:{c}]'))
+
+print('-=' * 30)
+
+for l in range(0,3):
+    for c in range(0,3):
+        print(f'[{matriz[l][c]:^5}]', end='')
+    print()

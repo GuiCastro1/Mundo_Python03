@@ -1,0 +1,18 @@
+A pasta __pycache__ e o arquivo Moeda.cpy fazem parte do mecanismo de cache de módulos do Python. Quando você importa um módulo (Moeda.py), o interpretador Python compila esse arquivo em um bytecode otimizado e salva o resultado em __pycache__ para acelerar importações futuras.
+
+Como funciona:
+Quando você executa import Moeda, o Python compila Moeda.py em bytecode.
+O arquivo compilado é salvo em __pycache__ com um nome como Moeda.cpython-312.pyc, onde:
+cpython indica que foi compilado pelo interpretador CPython.
+312 indica a versão do Python (3.12).
+Na próxima vez que o módulo for importado, o Python verifica se o .pyc está atualizado em relação ao .py. Se estiver, ele usa o bytecode compilado, tornando a importação mais rápida.
+Você pode excluir __pycache__?
+Sim, mas ele será recriado na próxima vez que o módulo for importado. Normalmente, não há necessidade de mexer nele.
+
+Se quiser evitar que __pycache__ seja criado, você pode rodar Python com a flag:
+
+bash
+Copiar
+Editar
+PYTHONDONTWRITEBYTECODE=1 python
+Isso impede a criação do cache, mas pode tornar as importações um pouco mais lentas.

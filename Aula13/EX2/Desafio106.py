@@ -65,3 +65,31 @@ print(t)
 # print(nota(4, 4, 6, 4, 34 ))
 # print(nota(4, 4, 6, 4,  54, 23))
 # print(nota(4, 4, 6, 4,  34))
+
+def notas(*num, sit=False):
+        """
+        Função nota recebe como parametro vário números e retorna
+        A quantidade de notas
+        A maior nota
+        A menor nota 
+        A média da turma 
+        A situação(opicional se 'sit=True') de acordo com a media (RUIM, RAZOAVEL, OTIMA) 
+        """
+
+        r = {}
+        r['total'] = len(num)
+        r['maior'] = max(num)
+        r['menor'] = min(num)
+        r['media'] = sum(num) / len(num)
+        if sit:
+            if  r['media'] >= 7:
+                r['situação'] = 'boa'
+            elif r['media'] >=5:
+                r['situação'] = 'razoável'
+            else:
+                r['situação'] = 'ruim'
+        return r
+
+resp = notas(4, 56, 6,8,8,9,9,3,32,2 ,sit=True)
+print(resp)
+help(notas)

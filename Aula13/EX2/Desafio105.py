@@ -19,7 +19,7 @@ def leiaint(msg):
             print('ERRO DIGITE UM NÚMERO VÁLIDO ! ! !')
         if ok:
             break
-        return valor
+    return valor
 
 n = leiaint('Digite um número:')
 print(f'Você acabou de digitar o número:{n}')
